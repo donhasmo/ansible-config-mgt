@@ -2,4 +2,8 @@
 172.31.2.234
 
 [db:vars]
+<<<<<<< HEAD
 ansible_user=ubuntu
+=======
+ansible_user=ubuntu
+>>>>>>> 52c260e14cee7af4169c99f6e791ae3dec9eb69d
