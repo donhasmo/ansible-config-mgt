@@ -1,12 +1,5 @@
-[tooling]
-<Tooling-Web-Server-Private-IP-Address>
 
-[todo]
-<Todo-Web-Server-Private-IP-Address>
-
-[nginx]
-<Nginx-Private-IP-Address>
 
 
 [db]
-<DB-Server-Private-IP-Address>
+172.31.2.234

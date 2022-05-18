@@ -12,7 +12,7 @@ pipeline {
       parallel {
         stage('Clone repo') {
           steps {
-            git(branch: "${inventory}", url: 'https://github.com/Anefu/ansible-config-mgt.git')
+            git(branch: "${inventory}", url: 'https://github.com/donhasmo/ansible-config-mgt.git')
           }
         }
 
