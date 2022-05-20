@@ -9,4 +9,7 @@
 
 
 [db]
-<DB-Server-Private-IP-Address>
+172.31.2.234
+
+[db:vars]
+ansible_user=ubuntu
