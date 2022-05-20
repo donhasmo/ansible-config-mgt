@@ -1,45 +1,42 @@
+
 pipeline {
-    agent any
-
+  agent any
+  parameters {
+      string(name: 'inventory', defaultValue: 'dev',  description: 'This is the inventory file for the environment to deploy configuration')
+      string(name: 'tag', defaultValue: 'all',  description: 'Tags to run ansible playbook against')
+    }
+  environment {
+        cpath = '/var/lib/jenkins/workspace/ansible-config-mgt_'+"${inventory}"+'/roles'
+    }
   stages {
-    stage('Build') {
-      steps {
-        script {
-          sh 'echo "Building Stage"'
+    stage('Clone repo') {
+      parallel {
+        stage('Clone repo') {
+          steps {
+            git(branch: "${inventory}", url: 'https://github.com/donhasmo/ansible-config-mgt.git')
+          }
         }
+
+        stage('Update ansible.cfg') {
+          steps {
+            sh ('sudo sed -i -e "/roles_path = \\/[a-z]*\\/*/a\\roles_path = $cpath" -e "/roles_path = \\/[a-z]*\\/*/d" /etc/ansible/ansible.cfg')
+          }
+        }
+      }
+    }
+    
+
+    stage('Run playbook') {
+      steps {
+        ansiblePlaybook(credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory/${inventory}', playbook: 'playbooks/site.yml', tags: "${tag}")
       }
     }
 
-    stage('Test') {
-      steps {
-        script {
-          sh 'echo "Testing Stage"'
-        }
-      }
-    }
-    
-    stage('Package') {
-      steps {
-        script {
-          sh 'echo "Package Stage"'
-        }
-      }
-    }
-    
-    stage('Deploy') {
-      steps {
-        script {
-          sh 'echo "Deploy Stage"'
-        }
-      }
-    }
-    
     stage('Clean up') {
       steps {
-        script {
-          sh 'echo "Clean up Stage"'
-        }
+        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenUnstable: true, deleteDirs: true)
       }
     }
-    }
+
+  }
 }
