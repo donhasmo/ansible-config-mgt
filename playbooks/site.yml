@@ -18,4 +18,4 @@
 #  when: load_balancer_is_required  
 
 - name: artifactory assignment
-  ansible.builtin.import_playbook: ../static-assignments/artifactory.yml 
+  import_playbook: ../static-assignments/artifactory.yml 
