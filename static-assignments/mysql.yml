@@ -1,6 +1,0 @@
----
-- hosts: db
-  roles: 
-    - mysql
-  tags:
-    - db

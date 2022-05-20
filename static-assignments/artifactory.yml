@@ -1,6 +1,0 @@
----
-- hosts: artifactory
-  roles: 
-    - artifactory
-  tags:
-    - artifactory
