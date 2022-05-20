@@ -7,15 +7,15 @@
   tags:
     - always
     
-# - name: Delete wireshark installation
-#  import_playbook: ../static-assignments/common-del.yml
+- name: Delete wireshark installation
+  import_playbook: ../static-assignments/common-del.yml
 
-# - name: webserver assignment
+- name: webserver assignment
   import_playbook: ../static-assignments/webservers.yml
 
-# - name: Loadbalancers assignment
-#  import_playbook: ../static-assignments/loadbalancers.yml
-#  when: load_balancer_is_required  
+- name: Loadbalancers assignment
+  import_playbook: ../static-assignments/loadbalancers.yml
+  when: load_balancer_is_required  
 
 - name: artifactory assignment
   import_playbook: ../static-assignments/artifactory.yml 
