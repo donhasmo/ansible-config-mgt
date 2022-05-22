@@ -20,3 +20,6 @@
 
 #- name: Loadbalancers assignment
 
+ - name: Artifactory assignment
+  import_playbook: ../static-assignments/artifactory.yml
+
