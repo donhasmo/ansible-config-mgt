@@ -8,3 +8,4 @@ ansible_user=ubuntu
 172.31.27.217 ansible_ssh_user=ec2-user
 
 
+

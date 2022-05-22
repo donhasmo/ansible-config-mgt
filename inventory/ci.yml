@@ -1,8 +1,9 @@
-[jenkins]
-172.31.28.212
 
-[nginx]
-<Nginx-Private-IP-Address>
+#[jenkins]
+#172.31.28.212
 
-[sonarqube]
-<SonarQube-Private-IP-Address>
+#[nginx]
+#<Nginx-Private-IP-Address>
+
+#[sonarqube]
+#<SonarQube-Private-IP-Address>
