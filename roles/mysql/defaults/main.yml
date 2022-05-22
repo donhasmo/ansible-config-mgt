@@ -115,10 +115,10 @@ name: homestead
 # Users.
 mysql_users: []
 name: homestead
-host: "%"
+host: 172.31.9.199
 password: sePret^i
-priv: "homestead.*:ALL"
-homestead_database_location: "/home/ubuntu/app/homestead/homestead-db.sql"
+priv: '*.*:ALL,GRANT'
+
 
 # Replication settings (replication is only enabled if master/user have values).
 mysql_server_id: "1"
