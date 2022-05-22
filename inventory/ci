@@ -7,4 +7,5 @@
 [sonarqube]
 <SonarQube-Private-IP-Address>
 
-
+[artifact_repository]
+<artifactory-Private-IP-Address>
