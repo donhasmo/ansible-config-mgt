@@ -1,4 +1,6 @@
 ---
-- hosts: db
+- name: Database Set Up 
+  hosts: db
+  become: true
   roles:
      - mysql
