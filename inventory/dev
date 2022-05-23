@@ -7,6 +7,7 @@ ansible_user=ubuntu
 [artifactory]
 172.31.27.217 ansible_ssh_user=ec2-user
 
-
+[todo]
+172.31.7.221 ansible_ssh_user=ec2-user
 
 
