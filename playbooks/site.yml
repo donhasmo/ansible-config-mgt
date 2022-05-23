@@ -26,5 +26,5 @@
 #  import_playbook: ../static-assignments/deployment.yml
 
  - name: Install SonarQube
-   import_playbook: ../static-assignments/sonar.yml
+   import_playbook: ../static-assignments/sonarqube.yml
   
