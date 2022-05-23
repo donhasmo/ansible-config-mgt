@@ -115,7 +115,7 @@ replicate: 1
 # Users.
 mysql_users: []
 name: homestead
-host: "%"
+host: 172.31.9.199
 password: sePret^i
 priv: '*.*:ALL,GRANT'
 
