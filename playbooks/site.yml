@@ -20,10 +20,14 @@
 
 #- name: Loadbalancers assignment
 
+
 #- name: Artifactory assignment
 #  import_playbook: ../static-assignments/artifactory.yml
 
  - name: Import database file
    import_playbook: ../static-assignments/database.yml
 
+
+- name: Artifactory assignment
+  import_playbook: ../static-assignments/artifactory.yml  
 
