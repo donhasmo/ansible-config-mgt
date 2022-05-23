@@ -1,0 +1,6 @@
+---
+# handlers file for sonarqube
+- name: Restart postgresql
+  service:
+    name: postgresql
+    state: restarted

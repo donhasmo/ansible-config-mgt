@@ -10,4 +10,6 @@ ansible_user=ubuntu
 [todo]
 172.31.7.221 ansible_ssh_user=ec2-user
 
+[sonarqube]
+172.31.15.131 ansible_ssh_user=ubuntu
 

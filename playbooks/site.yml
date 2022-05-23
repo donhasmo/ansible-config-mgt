@@ -21,6 +21,10 @@
 #- name: install mysql database
 #  import_playbook: ../static-assignments/database.yml
 
- - hosts: todo
- - name: Deploy todo application
-   import_playbook: ../static-assignments/deployment.yml
+#- hosts: todo
+#- name: Deploy todo application
+#  import_playbook: ../static-assignments/deployment.yml
+
+ - name: Install SonarQube
+   import_playbook: ../static-assignments/sonar.yml
+  
