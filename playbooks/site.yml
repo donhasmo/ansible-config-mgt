@@ -11,11 +11,9 @@
 #- name: webserver assignment
 #  import_playbook: ../static-assignments/webservers.yml
 
-#- hosts: lb
-#  tasks:
-#    - name: Load dynamic vars
-#      include_tasks: ../dynamic-assignments/env-vars.yml
-#- import_playbook: ../static-assignments/loadbalancers.yml 
+#- name: Loadbalancers assignment
+#  import_playbook: ../static-assignments/loadbalancers.yml
+#  when: load_balancer_is_requiredl 
 
 #- name: Artifactory assignment
 #  import_playbook: ../static-assignments/artifactory.yml  
